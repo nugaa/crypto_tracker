@@ -8,6 +8,7 @@ class DadosMoeda {
     var url = '$kUrl/BTC/$moedaConvertida?apikey=$kApiKey';
     NetworkHelper networkHelper = NetworkHelper(url);
     var moedaDados = await networkHelper.getDados();
+    print(url);
     return moedaDados;
   }
 

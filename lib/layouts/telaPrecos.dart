@@ -1,7 +1,6 @@
 import 'package:bitcoin_tracker/constantes.dart';
 import 'package:bitcoin_tracker/customWidgets/cardWidget.dart';
 import 'package:bitcoin_tracker/servicos/dados_moedas.dart';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,10 +16,23 @@ class _TelaPrecosState extends State<TelaPrecos> {
   var dadosBTC, dadosETH, dadosLTC;
   DadosMoeda dadosMoeda = DadosMoeda();
 
-  List<Text> getLista() {
-    List<Text> lista = [];
+  List<Widget> getLista() {
+    List<Widget> lista = [];
     for (String moeda in listaMoedas) {
-      lista.add(Text(moeda));
+      lista.add(
+        Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: Colors.pinkAccent.withOpacity(0.6),
+          ),
+          child: Center(
+            child: Text(
+              moeda,
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      );
     }
     return lista;
   }
