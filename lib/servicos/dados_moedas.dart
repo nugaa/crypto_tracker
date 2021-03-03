@@ -1,6 +1,6 @@
 import 'package:bitcoin_tracker/servicos/networking.dart';
 
-const kApiKey = '274CD117-6A8C-45BE-8360-BB7D377893CF';
+const kApiKey = '*****************';
 const kUrl = 'https://rest.coinapi.io/v1/exchangerate';
 
 class DadosMoeda {
